@@ -51,7 +51,7 @@ if (credentials && 'IntersectionObserver' in window && !reducedMotion.matches) {
 
 const marquee = document.querySelector('.hero-marquee');
 const marqueeTrack = marquee?.querySelector('.hero-marquee-track');
-if (marqueeTrack && !reducedMotion.matches) {
+if (marqueeTrack) {
   const updateScrollShift = () => {
     marqueeTrack.style.setProperty('--marquee-scroll', `${-Math.min(window.scrollY, 1400) * .38}px`);
   };
