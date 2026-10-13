@@ -62,7 +62,7 @@
 .hero-stage{min-height:330px}
 .hero-disc{top:0;width:min(30vw,350px);height:min(30vw,350px);min-width:280px;min-height:280px}
 .hero-marquee{bottom:5%;font-size:clamp(76px,8.5vw,125px)}
-.hero-marquee-track{animation-duration:30s}
+.hero-marquee-track{animation-duration:30s}@media(prefers-reduced-motion:reduce){.hero-marquee-track{animation-duration:30s!important}}
 .hero-marquee-role{color:#c7ded8}
 
 .hero-side{top:36%}
