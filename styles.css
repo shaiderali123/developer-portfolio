@@ -95,3 +95,33 @@
   margin: 0;
   color: #53554f;
 }
+
+.seo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.seo-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+.seo-gallery a {
+  display: block;
+}
+.seo-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.seo-gallery figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 10px;
+}
+.seo-gallery figcaption span {
+  color: #53554f;
+  font-size: .875rem;
+}
