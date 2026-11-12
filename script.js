@@ -59,28 +59,6 @@ if (marqueeTrack) {
   updateScrollShift();
 }
 
-const heroStage = document.querySelector('.hero-stage');
-const heroDisc = document.querySelector('.hero-disc');
-if (heroStage && heroDisc && !reducedMotion.matches) {
-  let framePending = false;
-  const updateHeroDepth = () => {
-    framePending = false;
-    const mobile = window.innerWidth < 650;
-    const progress = Math.max(0, Math.min(1, window.scrollY / (heroStage.closest('.hero').offsetHeight * .8)));
-    heroDisc.style.setProperty('--photo-tilt-x', `${-progress * (mobile ? 5 : 9)}deg`);
-    heroDisc.style.setProperty('--photo-tilt-y', `${progress * (mobile ? 8 : 14)}deg`);
-    heroDisc.style.setProperty('--photo-scale', String(1 + progress * (mobile ? .03 : .06)));
-  };
-  const scheduleHeroDepth = () => {
-    if (framePending) return;
-    framePending = true;
-    requestAnimationFrame(updateHeroDepth);
-  };
-  window.addEventListener('scroll', scheduleHeroDepth, { passive: true });
-  window.addEventListener('resize', scheduleHeroDepth, { passive: true });
-  scheduleHeroDepth();
-}
-
 const filterButtons = document.querySelectorAll('[data-filter]');
 const projectCards = document.querySelectorAll('.portfolio-card[data-category]');
 const loadMoreWrap = document.querySelector('.load-more-wrap');
