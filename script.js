@@ -67,10 +67,9 @@ if (heroStage && heroDisc && !reducedMotion.matches) {
     framePending = false;
     const mobile = window.innerWidth < 650;
     const progress = Math.max(0, Math.min(1, window.scrollY / (heroStage.closest('.hero').offsetHeight * .8)));
-    heroDisc.style.setProperty('--photo-shift', `${-progress * (mobile ? 12 : 24)}px`);
     heroDisc.style.setProperty('--photo-tilt-x', `${-progress * (mobile ? 5 : 9)}deg`);
     heroDisc.style.setProperty('--photo-tilt-y', `${progress * (mobile ? 8 : 14)}deg`);
-    heroDisc.style.setProperty('--photo-scale', String(1.12 + progress * (mobile ? .03 : .07)));
+    heroDisc.style.setProperty('--photo-scale', String(1 + progress * (mobile ? .03 : .06)));
   };
   const scheduleHeroDepth = () => {
     if (framePending) return;
