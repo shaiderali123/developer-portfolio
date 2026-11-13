@@ -125,3 +125,7 @@
   color: #53554f;
   font-size: .875rem;
 }
+
+.portfolio-card-image.project-homepage-preview {
+  aspect-ratio: 1000 / 480;
+}
