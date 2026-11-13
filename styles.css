@@ -129,3 +129,11 @@
 .portfolio-card-image.project-homepage-preview {
   aspect-ratio: 1000 / 480;
 }
+
+.project-featured .project-homepage-feature {
+  height: auto;
+}
+.project-homepage-feature img {
+  display: block;
+  height: auto;
+}
