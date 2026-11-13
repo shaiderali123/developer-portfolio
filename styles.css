@@ -126,8 +126,9 @@
   font-size: .875rem;
 }
 
-.portfolio-card-image.project-homepage-preview {
-  aspect-ratio: 1000 / 480;
+.portfolio-card-image.project-homepage-preview img {
+  object-fit: contain;
+  object-position: center;
 }
 
 .project-featured .project-homepage-feature {
