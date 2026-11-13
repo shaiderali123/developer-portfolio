@@ -113,6 +113,9 @@
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: center top;
   border: 1px solid var(--line);
   border-radius: 10px;
 }
